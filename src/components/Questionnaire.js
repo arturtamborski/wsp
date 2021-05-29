@@ -9,6 +9,8 @@ import ListAltIcon from '@material-ui/icons/ListAlt';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import ForumIcon from '@material-ui/icons/Forum';
 
+import Ankiety from '../components/Ankiety';
+
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
@@ -44,7 +46,7 @@ export default function Questionarie() {
       </Grid>
       <Grid item xs={12} p={2}>
         <Box p={2} m={1}>
-          {content}
+          <Ankiety />
         </Box>
       </Grid>
     </Box>

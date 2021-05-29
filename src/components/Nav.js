@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
@@ -17,22 +18,18 @@ export default function Home() {
   const classes = useStyles();
   const [value, setValue] = useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-      showLabels
-      className={classes.root}
-    >
-      <BottomNavigationAction label="Słownik" icon={<MenuBookIcon />} />
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Profil" icon={<PersonIcon />} />
-    </BottomNavigation>
+    <Grid item xs={12}>
+      <BottomNavigation
+        value={value}
+        onChange={(event, newValue) => setValue(newValue)}
+        showLabels
+        className={classes.root}
+      >
+        <BottomNavigationAction label="Słownik" icon={<MenuBookIcon />} />
+        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Profil" icon={<PersonIcon />} />
+      </BottomNavigation>
+    </Grid>
   );
 };

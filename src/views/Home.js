@@ -41,7 +41,9 @@ export default function Home() {
       </Grid>
 
       <Grid container spacing={3}>
-        <Nav />
+        <Grid item xs={12}>
+          <Nav />
+        </Grid>
       </Grid>
     </div>
   );

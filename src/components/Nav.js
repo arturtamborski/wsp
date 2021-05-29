@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@material-ui/icons/Person';
 
 const useStyles = makeStyles({
   root: {
@@ -19,18 +22,17 @@ export default function Home() {
   };
 
   return (
-    <Paper className={classes.root}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        indicatorColor="primary"
-        textColor="primary"
-        centered
-      >
-        <Tab label="Słownik" />
-        <Tab label="Home" />
-        <Tab label="Profil" />
-      </Tabs>
-    </Paper>
+    <BottomNavigation
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+      showLabels
+      className={classes.root}
+    >
+      <BottomNavigationAction label="Słownik" icon={<MenuBookIcon />} />
+      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+      <BottomNavigationAction label="Profil" icon={<PersonIcon />} />
+    </BottomNavigation>
   );
 };

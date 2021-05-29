@@ -20,8 +20,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     height: '98vh',
     width: '98vw',
-    margin: 0,
-    padding: 0,
   }
 }));
 

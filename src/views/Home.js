@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
+import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -31,7 +32,9 @@ export default function Home() {
         </Grid>
         <Grid item xs={3}>
           <Box p={2}>
-            <NotificationsIcon />
+            <IconButton>
+              <NotificationsIcon />
+            </IconButton>
           </Box>
         </Grid>
       </Grid>

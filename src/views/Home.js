@@ -1,12 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 
 import Nav from '../components/Nav';
+import Bell from '../components/Bell';
+import Profile from '../components/Profile';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,18 +24,8 @@ export default function Home() {
   return (
     <Container maxWidth="sm">
       <Grid container className={classes.root} spacing={3}>
-        <Grid item xs={2}>
-          <Paper className={classes.paper}>
-            xs
-          </Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Box p={2}>
-            <IconButton>
-              <NotificationsIcon />
-            </IconButton>
-          </Box>
-        </Grid>
+        <Profile />
+        <Bell />
       </Grid>
 
       <Grid container spacing={3}>

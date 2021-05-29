@@ -22,8 +22,7 @@ const theme = createMuiTheme(themeObject);
 
 const useStyles = makeStyles({
   root: {
-    padding: 16,
-    minWidth: 191,
+    background: '#008080',
   },
 });
 
@@ -55,10 +54,6 @@ export default function App() {
             <Grid container>
               <Routes />
             </Grid>
-            <Button onClick={getUser}>
-              Log in :)
-              {resp}
-            </Button>
           </Grid>
         </BrowserRouter>
       </ThemeProvider>

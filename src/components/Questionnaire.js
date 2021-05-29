@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
@@ -21,6 +21,11 @@ const useStyles = makeStyles({
 export default function Questionarie() {
   const classes = useStyles();
   const [value, setValue] = useState(0);
+  let content = '';
+
+  useEffect(() => {
+    content = value;
+  }, [value]);
 
   return (
     <Box className={classes.box}>
@@ -38,8 +43,8 @@ export default function Questionarie() {
         </BottomNavigation>
       </Grid>
       <Grid item xs={12} p={2}>
-        <Box p={3} m={1}>
-          text
+        <Box p={2} m={1}>
+          {content}
         </Box>
       </Grid>
     </Box>

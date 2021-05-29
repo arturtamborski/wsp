@@ -9,7 +9,7 @@ import Questionarie from '../components/Questionnaire';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    justifyContent: 'space-between', 
+    justifyContent: 'flex-end',
     flexGrow: 1,
   },
   container: {
@@ -29,8 +29,8 @@ export default function Home() {
   return (
     <Container maxWidth="xs" className={classes.container}>
       <Grid container spacing={3} className={classes.root}>
-        <Profile />
         <Bell />
+        <Profile />
       </Grid>
 
       <Grid container spacing={3} style={{flexGrow: 100}}>

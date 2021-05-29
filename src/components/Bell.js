@@ -8,7 +8,7 @@ export default function Bell() {
     <Grid item xs={3}>
       <Box p={2}>
         <IconButton>
-          <NotificationsIcon />
+          <NotificationsIcon fontSize="medium"/>
         </IconButton>
       </Box>
     </Grid>

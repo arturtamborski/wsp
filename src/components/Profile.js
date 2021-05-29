@@ -17,7 +17,7 @@ export default function Profile() {
 
   return (
     <Grid item xs={3} className={classes.root}>
-      <Box p={2}>
+      <Box p={1}>
         <Avatar alt="Avatar" src="/static/images/avatar/1.jpg" />
       </Box>
     </Grid>

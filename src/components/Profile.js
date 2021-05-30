@@ -3,6 +3,8 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 
+import avatar from '../assets/avatar.png';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -18,7 +20,7 @@ export default function Profile() {
   return (
     <Grid item xs={3} className={classes.root}>
       <Box p={1}>
-        <Avatar alt="Avatar" src="/static/images/avatar/1.jpg" />
+        <Avatar alt="Avatar" src={avatar} />
       </Box>
     </Grid>
   );

@@ -7,6 +7,9 @@ import Bell from '../components/Bell';
 import Profile from '../components/Profile';
 import Questionarie from '../components/Questionnaire';
 
+import logo from '../assets/logo.svg';
+import bg from '../assets/BG.svg';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     justifyContent: 'flex-end',
@@ -20,8 +23,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     height: '98vh',
     width: '98vw',
+    backgroundImage: `url(${bg})`,
   }
 }));
+
 
 export default function Home() {
   const classes = useStyles();
@@ -31,6 +36,18 @@ export default function Home() {
       <Grid container spacing={3} className={classes.root}>
         <Bell />
         <Profile />
+      </Grid>
+
+      <Grid container spacing={3}>
+        <Grid container spacing={3}>
+          <Grid item xs={3}>
+            <img src={logo}></img>
+          </Grid>
+          <Grid item xs={9} style={{paddingBottom: '3rem', paddingTop: '0'}}>
+            <h1>Cześć!</h1>
+            <h4>O czym chcesz dzisiaj porozmawiać?</h4>
+          </Grid>
+        </Grid>
       </Grid>
 
       <Grid container spacing={3} style={{flexGrow: 100}}>

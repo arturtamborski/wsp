@@ -8,6 +8,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import ForumIcon from '@material-ui/icons/Forum';
+import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
 
 import Ankiety from '../components/Ankiety';
 
@@ -41,9 +42,9 @@ export default function Questionarie() {
           className={classes.root}
         >
           <BottomNavigationAction label="Ankiety" icon={<ListAltIcon />} />
-          <BottomNavigationAction label="Consent" icon={<AssignmentTurnedInIcon />} />
+          <BottomNavigationAction label="Konsent" icon={<AssignmentTurnedInIcon />} />
           <BottomNavigationAction label="Komunikacja" icon={<ForumIcon />} />
-          <BottomNavigationAction label="Karty" icon={<ForumIcon />} />
+          <BottomNavigationAction label="Karty" icon={<ViewCarouselIcon />} />
         </BottomNavigation>
       </Grid>
       <Grid item xs={12} p={2}>

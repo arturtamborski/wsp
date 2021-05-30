@@ -7,7 +7,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import HomeIcon from '@material-ui/icons/Home';
-import PersonIcon from '@material-ui/icons/Person';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 
 const useStyles = makeStyles({
@@ -30,7 +30,7 @@ export default function Home() {
       >
         <BottomNavigationAction label="Słownik" icon={<MenuBookIcon />} />
         <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Profil" icon={<PersonIcon />} />
+        <BottomNavigationAction label="Moje ankiety" icon={<AssignmentIcon />} />
       </BottomNavigation>
     </Grid>
   );

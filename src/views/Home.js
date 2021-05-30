@@ -25,6 +25,8 @@ const useStyles = makeStyles((theme) => ({
     height: '98vh',
     width: '98vw',
     backgroundImage: `url(${bg})`,
+    maxWidth: '360px',
+    maxHeight: '760px',
   }
 }));
 

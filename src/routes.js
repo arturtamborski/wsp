@@ -10,6 +10,18 @@ const routes = [
   },
   {
     exact: true,
+    path: '/dictionary',
+    key: 'dictionary',
+    render: lazy(() => import('./views/Dictionary'))
+  },
+  {
+    exact: true,
+    path: '/my-forms',
+    key: 'myforms',
+    render: lazy(() => import('./views/MyForms'))
+  },
+  {
+    exact: true,
     path: '/login',
     key: 'login',
     render: lazy(() => import('./views/Login'))

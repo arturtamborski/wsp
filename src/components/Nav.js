@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import SvgIcon from '@material-ui/core/SvgIcon';
+import { useHistory } from "react-router-dom";
 
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import HomeIcon from '@material-ui/icons/Home';
@@ -19,6 +19,7 @@ const useStyles = makeStyles({
 export default function Home() {
   const classes = useStyles();
   const [value, setValue] = useState(1);
+  const history = useHistory();
 
   return (
     <Grid item xs={12}>
@@ -28,9 +29,9 @@ export default function Home() {
         showLabels
         className={classes.root}
       >
-        <BottomNavigationAction label="Słownik" icon={<MenuBookIcon />} />
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Moje ankiety" icon={<AssignmentIcon />} />
+        <BottomNavigationAction label="Słownik" icon={<MenuBookIcon />} onClick={() => history.push('/dictionary')} />
+        <BottomNavigationAction label="Home" icon={<HomeIcon />} onClick={() => history.push('/')} />
+        <BottomNavigationAction label="Moje ankiety" icon={<AssignmentIcon />} onClick={() => history.push('/my-forms')} />
       </BottomNavigation>
     </Grid>
   );

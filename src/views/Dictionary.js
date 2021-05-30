@@ -1,18 +1,20 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
 
 import Nav from '../components/Nav';
 import Bell from '../components/Bell';
 import Profile from '../components/Profile';
 import Questionarie from '../components/Questionnaire';
+import Slownik from '../components/Slownik';
+import SearchIcon from '@material-ui/icons/Search';
 
 import logo from '../assets/logo.svg';
 import bg from '../assets/BG.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
     justifyContent: 'flex-end',
     flexGrow: 1,
   },
@@ -21,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flexFlow: 'column',
     flexWrap: 'wrap',
     alignContent: 'space-between',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     height: '98vh',
     width: '98vw',
     backgroundImage: `url(${bg})`,
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Home() {
+export default function Dictionary() {
   const classes = useStyles();
 
   return (
@@ -40,19 +42,18 @@ export default function Home() {
       </Grid>
 
       <Grid container spacing={3}>
-        <Grid container spacing={3}>
-          <Grid item xs={3}>
-            <img src={logo}></img>
+        <Grid container spacing={1} alignItems="flex-end">
+          <Grid item>
+            <SearchIcon />
           </Grid>
-          <Grid item xs={9} style={{paddingBottom: '3rem', paddingTop: '0'}}>
-            <h1>Cześć!</h1>
-            <h4>O czym chcesz dzisiaj porozmawiać?</h4>
+          <Grid item>
+            <TextField id="input-with-icon-grid" label="With a grid" />
           </Grid>
         </Grid>
       </Grid>
 
       <Grid container spacing={3} style={{flexGrow: 100}}>
-        <Questionarie />
+        <Slownik />
       </Grid>
 
       <Grid container spacing={3} style={{flexGrow: 1}}>

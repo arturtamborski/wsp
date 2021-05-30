@@ -11,6 +11,9 @@ import ForumIcon from '@material-ui/icons/Forum';
 import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
 
 import Ankiety from '../components/Ankiety';
+import Konsent from '../components/Konsent';
+import Komunikacja from '../components/Komunikacja';
+import Karty from '../components/Karty';
 
 const useStyles = makeStyles({
   root: {
@@ -23,9 +26,9 @@ const useStyles = makeStyles({
 
 const componentsMap = {
   0: <Ankiety />,
-  1: <></>,
-  2: <></>,
-  3: <></>,
+  1: <Konsent />,
+  2: <Komunikacja />,
+  3: <Karty />,
 }
 
 export default function Questionarie() {

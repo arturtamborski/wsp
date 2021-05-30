@@ -11,16 +11,16 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(1),
     color: theme.palette.text.secondary,
-    height: '20vh',
+    height: '41.5vh',
     padding: '1rem',
     display: 'flex',
     alignItems: 'flex-end',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
     fontSize: '150%',
   },
 }));
 
-export default function Ankiety() {
+export default function Konsent() {
   const classes = useStyles();
 
   return (
@@ -28,18 +28,10 @@ export default function Ankiety() {
       <Grid container spacing={2}>
         <Grid container item xs={12} spacing={2}>
           <Grid item xs={6}>
-            <Paper className={classes.paper}>Vanilla</Paper>
+            <Paper className={classes.paper}>Samodzielnie</Paper>
           </Grid>
           <Grid item xs={6}>
-            <Paper className={classes.paper}>Oral</Paper>
-          </Grid>
-        </Grid>
-        <Grid container item xs={12} spacing={2}>
-          <Grid item xs={6}>
-            <Paper className={classes.paper}>Kinky</Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper className={classes.paper}>Anal</Paper>
+            <Paper className={classes.paper}>Wspólnie</Paper>
           </Grid>
         </Grid>
       </Grid>

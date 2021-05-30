@@ -29,9 +29,9 @@ export default function Home() {
         showLabels
         className={classes.root}
       >
-        <BottomNavigationAction label="Słownik" icon={<MenuBookIcon />} onClick={() => history.push('/dictionary')} />
+        <BottomNavigationAction label="Słownik" icon={<MenuBookIcon />} />
         <BottomNavigationAction label="Home" icon={<HomeIcon />} onClick={() => history.push('/')} />
-        <BottomNavigationAction label="Moje ankiety" icon={<AssignmentIcon />} onClick={() => history.push('/my-forms')} />
+        <BottomNavigationAction label="Moje ankiety" icon={<AssignmentIcon />} />
       </BottomNavigation>
     </Grid>
   );
